@@ -1,0 +1,30 @@
+.optionsBtn {
+  border: none;
+  width: 80px;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgb(97, 92, 92);
+  transition: all 50ms linear;
+  color: #0000ff;
+}
+
+.optionsBtn:not(:last-child){
+  margin-right: 10px;
+}
+
+.optionsBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 3px rgb(97, 92, 92);
+  background-color: rgb(146, 146, 214);
+}
+
+.optionsBtn:first-child{
+  color: #039a03;
+}
+
+.optionsBtn:last-child{
+  color: #ff0000;
+}
+
+
