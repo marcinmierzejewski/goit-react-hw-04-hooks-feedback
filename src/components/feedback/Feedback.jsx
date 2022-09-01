@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Feedback.module.css';
 
 import { Statistic } from 'components/statistics/Statistics';
@@ -12,19 +12,16 @@ export const Feedback = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  useEffect(() => {}, [good, neutral, bad]);
-
-  const countTotalFeedback = () => 
-    (good + neutral + bad);  
+  const countTotalFeedback = () => good + neutral + bad;
 
   const countPositiveFeedbackPercentage = () =>
     (good / countTotalFeedback()) * 100;
 
   const resetState = () => {
     console.log('Reset...');
-    setGood(good - good);
-    setNeutral(neutral - neutral);
-    setBad(bad - bad);
+    setGood(0);
+    setNeutral(0);
+    setBad(0);
   };
 
   const { feedback, btnWrapper } = styles;
